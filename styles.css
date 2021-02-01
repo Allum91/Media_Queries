@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 50px;
+  background-color: black;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+nav .logo {
+  background-color: purple;
+  color: white;
+  width: 200px;
+  padding-top: 10px;
+}
+nav .link-1, nav .link-2, nav .link-3 {
+  color: white;
+  text-decoration: underline;
+  padding-right: 25px;
+  padding-top: 15px;
+}
+
+.main {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  margin: 25px;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  grid-template-rows: 1fr 1fr 1fr 2fr 2fr;
+  grid-gap: 20px;
+  height: 100vh;
+}
+.main #image {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  border-radius: 50%;
+  height: 350px;
+  width: 350px;
+}
+.main #about, .main #hobbies, .main #contact {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  background-color: purple;
+}
+.main #about {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.main #hobbies {
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.main #contact {
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.main #employment, .main #education {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background-color: purple;
+}
+.main #employment {
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+.main #education {
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+@media only screen and (max-width: 550px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 25px;
+    background-color: black;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+  }
+  nav .logo {
+    background-color: purple;
+    color: white;
+    width: 100px;
+    padding: 5px;
+  }
+  nav .link-1, nav .link-2, nav .link-3 {
+    color: white;
+    text-decoration: underline;
+    padding-right: 12.5px;
+    padding-top: 7.5px;
+  }
+
+  .main {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    margin: 25px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 1fr 1fr 2fr 1fr;
+    grid-gap: 20px;
+    height: 100vh;
+  }
+  .main #image {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .main #about, .main #hobbies, .main #contact, .main #employment, .main #education {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .main #about {
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .main #hobbies {
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  .main #contact {
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+  .main #employment {
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+  .main #education {
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
+}
